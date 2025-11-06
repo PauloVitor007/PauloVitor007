@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respostas Teóricas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Questões Teóricas</h1>
+
+        <article class="questao">
+            <h2>13 - Descreva o que é o objeto `document` presente no ambiente do javascript</h2>
+            <p>
+                O objeto <code>document</code> é uma das APIs mais importantes do JavaScript quando executado em um navegador. Ele é a representação de **toda a página HTML** carregada.
+            </p>
+            <p>
+                Pense no seu arquivo <code>.html</code> como um texto estruturado. Quando o navegador lê esse arquivo, ele o converte em um objeto vivo e interativo na memória, e esse objeto é o <code>document</code>.
+            </p>
+            <p>
+                Ele pertence a uma API maior chamada **DOM (Document Object Model)**, que nos permite:
+            </p>
+            <ul>
+                <li><strong>Selecionar elementos:</strong> Usando métodos como <code>document.getElementById()</code>, <code>document.querySelector()</code>, etc.</li>
+                <li><strong>Manipular elementos:</strong> Alterar o texto (<code>.textContent</code>), o HTML (<code>.innerHTML</code>), ou os atributos (<code>.setAttribute()</code>) de uma tag.</li>
+                <li><strong>Criar e remover elementos:</strong> Usando <code>document.createElement()</code> e <code>elemento.remove()</code>.</li>
+                <li><strong>Reagir a eventos:</strong> Anexar "ouvintes" a elementos, como <code>elemento.addEventListener('click', ...)</code>.</li>
+            </ul>
+            <p>
+                Em resumo, o <code>document</code> é o ponto de entrada que nos dá o poder de ler e modificar dinamicamente todo o conteúdo e a estrutura da página web.
+            </p>
+        </article>
+
+        <article class="questao">
+            <h2>14 (e 2) - Descreva a diferença entre o Javascript no navegador e no Node.js</h2>
+            <p>
+                A principal diferença é o <strong>ambiente de execução</strong>, o que muda quais APIs e objetos globais estão disponíveis.
+            </p>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>JavaScript no Navegador (Client-side)</th>
+                            <th>Node.js (Server-side)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ambiente</strong></td>
+                            <td>Roda dentro do navegador (Chrome, Firefox).</td>
+                            <td>Roda em um servidor ou máquina local (usa o motor V8 do Chrome).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Objeto Global</strong></td>
+                            <td><code>window</code></td>
+                            <td><code>global</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>APIs Principais</strong></td>
+                            <td><strong>DOM/BOM:</strong> <code>document</code>, <code>navigator</code>, <code>location</code> (para manipular a página).</td>
+                            <td><strong>APIs de Servidor:</strong> <code>fs</code> (File System), <code>http</code> (Rede), <code>path</code> (Caminhos de arquivo).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Propósito</strong></td>
+                            <td>Interatividade da página, manipulação de HTML/CSS, requisições <code>fetch</code>.</td>
+                            <td>Criar servidores web (backend), scripts de automação, acesso a banco de dados.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <a href="../../index.html" class="voltar-link">&larr; Voltar ao Portfólio</a>
+
+    </main>
+
+</body>
+</html>

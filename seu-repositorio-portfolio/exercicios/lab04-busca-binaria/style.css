@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+h1 { text-align: center; }
+
+/* Seção de controle para inputs e botões */
+.controle {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+/* Inputs de número */
+input[type="number"] {
+    flex-grow: 1; /* Ocupa o espaço disponível */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    min-width: 150px; /* Largura mínima */
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    color: #fff;
+    background-color: #3498db; /* Azul */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Container para o botão Sort */
+.controle-sort {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Botão de Ação (Sort) */
+.btn-acao {
+    background-color: #2ecc71; /* Verde */
+    width: 60%; /* Mais largo */
+    font-weight: bold;
+}
+.btn-acao:hover {
+    background-color: #27ae60;
+}
+
+/* Display do Array */
+.array-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ecf0f1; 
+    border-radius: 5px;
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.array-item {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+/* Display de Resultado */
+.resultado {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c; 
+    font-family: monospace;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 30px 0;
+}
+
+.voltar-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.voltar-link:hover {
+    text-decoration: underline;
+}

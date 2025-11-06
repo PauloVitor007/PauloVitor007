@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio Paulo Vitor — exercícios e projetos de programação web.">
+    <title>Meu Portfólio - Paulo Vitor</title>
+    <link rel="stylesheet" href="css/.css">
+</head>
+<body>
+    <header class="site-header container" role="banner">
+        <h1 class="brand">Meu Portfólio - <span class="name">Paulo Vitor</span></h1>
+        <nav class="nav-links" role="navigation" aria-label="Navegação principal">
+            <a href="#projects">Projetos</a>
+            <a href="#about">Sobre</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <main class="container" role="main">
+        <section class="hero">
+            <h2>Olá — eu sou <strong>Paulo Vitor</strong></h2>
+            <p>Estudante / Desenvolvedor web. Aqui estão alguns exercícios e projetos que demonstrei durante a disciplina.</p>
+            <p><a class="btn cta" href="#projects">Ver Projetos</a></p>
+        </section>
+
+        <hr>
+
+        <section id="projects" aria-label="Projetos" class="projects">
+            <h2>Exercícios Obrigatórios</h2>
+            <div class="projects-grid">
+                <a class="project-card" href="exercicios/lab01-dom/index.html" aria-label="Lab 01 - Manipulação do DOM">
+                    <h3>Lab 01 - Manipulação do DOM</h3>
+                    <p>Exercícios básicos de seleção e alteração do DOM usando JavaScript.</p>
+                </a>
+
+                <a class="project-card" href="exercicios/lab02-arrays/index.html" aria-label="Lab 02 - Métodos de Array">
+                    <h3>Lab 02 - Métodos de Array</h3>
+                    <p>Exemplos práticos com map, filter, reduce e outros métodos.</p>
+                </a>
+            </div>
+
+            <h2 style="margin-top:28px">Outros Exercícios</h2>
+            <div class="projects-grid">
+                <a class="project-card" href="exercicios/lab05-busca-binaria/index.html">
+                    
+                    <h3>Lab 05 - Pesquisa Sequencial e Binária</h3>
+                    <p>Implementações e comparação entre busca sequencial e busca binária.</p>
+                </a>
+                
+
+                <a class="project-card" href="exercicios/questao04.html">
+                    <h3>Exercício 04 - Calculadora Simples</h3>
+                    <p>Pequena calculadora em JavaScript com operações básicas.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" aria-label="Sobre" style="margin-top:30px">
+            <h2>Sobre</h2>
+            <p>Adicione aqui uma pequena biografia: formação, interesses e tecnologias que você está estudando (por exemplo: HTML, CSS, JavaScript).</p>
+        </section>
+
+        <section id="contact" aria-label="Contato" style="margin-top:30px">
+            <h2>Contato</h2>
+            <p>Você pode me contatar em: <a href="mailto:seu.email@exemplo.com">paulo.hermogens@academico.ifpb.edu.br</a></p>
+        </section>
+    </main>
+
+    <footer class="container" role="contentinfo" style="text-align:center; margin:20px auto 40px;">
+        <p>© <span id="year">2025</span> Paulo Vitor. Projeto para aprendizado.</p>
+    </footer>
+</body>
+</html>

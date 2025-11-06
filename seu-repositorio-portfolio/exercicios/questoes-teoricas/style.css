@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+h1 { text-align: center; }
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+
+/* Estilo para a questão */
+.questao {
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+/* Estilo para código inline */
+code {
+    font-family: monospace;
+    background-color: #ecf0f1;
+    color: #c0392b;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Tabela de comparação */
+.tabela-container {
+    overflow-x: auto; /* Para rolagem em telas pequenas */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #f9f9f9;
+}
+td strong {
+    color: #2c3e50;
+}
+
+
+.voltar-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.voltar-link:hover {
+    text-decoration: underline;
+}
