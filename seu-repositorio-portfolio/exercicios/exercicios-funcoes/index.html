@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios: Funções</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Exercícios: Funções</h1>
+        <p class="subtitulo">As respostas para estes exercícios estão no código-fonte e no console do navegador (Pressione F12 para ver).</p>
+
+        <article class="exercicio-card">
+            <h2>Definição de Função (multiplyAndAdd)</h2>
+            <p>Escreva uma função que receba três parâmetros e retorne o resultado da multiplicação dos dois primeiros, somado ao terceiro.</p>
+            
+            <h3>1. Definição de Função (Padrão)</h3>
+            <pre><code>function multiplyAndAdd_Def(a, b, c) {
+    return (a * b) + c;
+}
+console.log("Definição:", multiplyAndAdd_Def(2, 3, 4)); // 10</code></pre>
+
+            <h3>2. Expressão de Função</h3>
+            <pre><code>const multiplyAndAdd_Exp = function(a, b, c) {
+    return (a * b) + c;
+};
+console.log("Expressão:", multiplyAndAdd_Exp(2, 3, 4)); // 10</code></pre>
+
+            <h3>3. Arrow Function</h3>
+            <pre><code>const multiplyAndAdd_Arrow = (a, b, c) => (a * b) + c;
+
+console.log("Arrow:", multiplyAndAdd_Arrow(2, 3, 4)); // 10</code></pre>
+        </article>
+        
+        <article class="exercicio-card">
+            <h2>Callback</h2>
+
+            <h3>1. Saudar com Callback</h3>
+            <pre><code>function saudar(nome, callback) {
+    const saudacao = "Olá, " + nome + "!";
+    callback(saudacao);
+}
+
+saudar("Alice", function(resultado) {
+    console.log(resultado); // "Olá, Alice!"
+});</code></pre>
+
+            <h3>2. Filtro de Array com Callback</h3>
+            <pre><code>function filtrar(array, callbackCriterio) {
+    const filtrados = [];
+    for (const item of array) {
+        if (callbackCriterio(item)) {
+            filtrados.push(item);
+        }
+    }
+    return filtrados;
+}
+
+let numeros = [1, 12, 5, 8, 130, 44];
+let pares = filtrar(numeros, function(numero) {
+    return numero % 2 === 0;
+});
+console.log("Filtro Pares:", pares); // [12, 8, 130, 44]</code></pre>
+
+            <h3>3. Callback com Funções Assíncronas (Timer)</h3>
+            <pre><code>function executarComDelay(callback, tempo) {
+    setTimeout(callback, tempo);
+}
+
+executarComDelay(function() {
+    console.log("Executado após 2 segundos");
+}, 2000);</code></pre>
+
+            <h3>4. Transformação em Array de Objetos</h3>
+            <pre><code>function criarObjetos(nomes, callback) {
+    const objetos = [];
+    for (const nome of nomes) {
+        objetos.push(callback(nome));
+    }
+    return objetos;
+}
+
+let nomes = ["Alice", "Bob", "Carlos"];
+let objetos = criarObjetos(nomes, function(nome) {
+    return { nome: nome };
+});
+console.log("Array de Objetos:", objetos);</code></pre>
+
+            <h3>5. Manipulação de Arrays de Objetos</h3>
+            <pre><code>function filtrarProdutos(produtos, callbackCriterio) {
+    const filtrados = [];
+    for (const produto of produtos) {
+        if (callbackCriterio(produto)) {
+            filtrados.push(produto);
+        }
+    }
+    return filtrados;
+}
+
+let produtos = [
+    { nome: "Camiseta", preco: 25 },
+    { nome: "Calça", preco: 50 },
+    { nome: "Meias", preco: 5 }
+];
+let produtosCaros = filtrarProdutos(produtos, function(produto) {
+    return produto.preco > 20;
+});
+console.log("Produtos Filtrados:", produtosCaros);</code></pre>
+        </article>
+
+        <a href="../../index.html" class="voltar-link">&larr; Voltar ao Portfólio</a>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
