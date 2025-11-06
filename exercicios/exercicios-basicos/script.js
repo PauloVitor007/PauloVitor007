@@ -1,4 +1,4 @@
-// Espera o DOM carregar
+//  DOM carrega
 document.addEventListener('DOMContentLoaded', () => {
 
     // Q6: Celsius para Fahrenheit
