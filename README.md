@@ -1,16 +1,31 @@
-## Hi there 👋
+## Olá 👋 Eu sou o Paulo Vitor
 
-<!--
-**PauloVitor007/PauloVitor007** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Sou apaixonado por tecnologia, criação de conteúdo e tudo que envolve imaginar e transformar ideias em algo real.  
+Atualmente estudando programação, linguagens e dublagem, enquanto desenvolvo projetos pessoais e acadêmicos.
 
-Here are some ideas to get you started:
+### O que estou fazendo no momento
+• Estudando Python e SQL  
+• Aprendendo boas práticas de roteirização e formatação para dublagem  
+• Trabalhando em projetos de análise de sentimentos e automação
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: sou doido
--->
+### Interesses
+• Programação  
+• Fotografia (Uso uma Nikon D3100 📸)  
+• Produção de conteúdo  
+• Anime, mangá e cultura japonesa  
+• Idiomas (principalmente inglês e japonês)
+
+### Como falar comigo
+• Instagram de fotografia: **@paulo.vision** (se quiser, posso colocar o link direto)  
+• GitHub Issues também estão abertos para conversar 👀  
+• Se me encontrar por aí, provavelmente vou estar ouvindo música ou pedalando
+
+### Uma curiosidade
+Sou alguém que sente muito, pensa muito e transforma isso em arte, código ou foto.  
+E sim, sou um pouco doido, mas do jeito certo ⚡
+
+---
+
+🌱 Sempre aprendendo  
+🎧 Sempre ouvindo música  
+📷 Sempre procurando um momento bonito para fotografar  
