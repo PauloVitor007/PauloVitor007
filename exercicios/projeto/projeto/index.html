@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>joguinho  - time1 vs time2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      h1 { text-align: center; }
+      main {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 10px;
+      }
+      form {
+        background-color: #444;
+        padding: 15px;
+        border-radius: 8px;
+        width: 180px;
+      }
+      form div:first-child {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      #red div:first-child { color: #e74c3c; }
+      #blue div:first-child { color: #3498db; }
+      
+      label, input, button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        box-sizing: border-box; 
+      }
+      input[type="number"], input[type="button"], button {
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      button, input[type="button"] {
+        cursor: pointer;
+        font-weight: bold;
+        background-color: #666;
+        color: white;
+      }
+      #buttonStart { background-color: #2ecc71; }
+      #buttonReset { background-color: #e67e22; }
+
+      #canvas { 
+        text-align: center; 
+        position: relative;
+      }
+      canvas { background: #000; border: 1px solid #fff; }
+
+      #scoreboard {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      #scoreboard h2 {
+        margin: 5px;
+        font-size: 1.5em;
+      }
+      #score-red { color: #e74c3c; }
+      #score-blue { color: #3498db; }
+      #goal-message {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        font-size: 10em;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 1s ease-out;
+        pointer-events: none; 
+        z-index: 100;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Versus</h1>
+    <main>
+      <form id="red">
+        <div>Time 1</div>
+        <label for="red-goal-height">Altura Trave (1-300):</label>
+        <input type="number" id="red-goal-height" value="100" min="1" max="300" />
+        
+        <label for="red-ball-count">Qtd. Bolas:</label>
+        <input type="number" id="red-ball-count" value="10" min="1" max="50" />
+        <label for="red-ball-speed">Vel. Bolas (1-20):</label>
+        <input type="number" id="red-ball-speed" value="7" min="1" max="20" />
+        
+        <button type="button" id="red-apply-settings">Aplicar</button>
+      </form>
+
+      <div id="canvas">
+        <div id="goal-message">GOL! </div>
+        <div id="scoreboard">
+          <h2 id="score-red">RED:0</h2>
+          <h2 id="score-blue">BLUE:0</h2>
+        </div>
+        <canvas></canvas>
+        <input type="button" value="Start" id="buttonStart" />
+        <input type="button" value="Reset" id="buttonReset" />
+      </div>
+
+      <form id="blue">
+        <div>Time 2</div>
+        <label for="blue-goal-height">Altura Trave (1-300):</label>
+        <input type="number" id="blue-goal-height" value="100" min="1" max="300" />
+        <label for="blue-ball-count">Quantidade das Bolas:</label>
+        <input type="number" id="blue-ball-count" value="10" min="1" max="50" />
+        <label for="blue-ball-speed">Velocidade das Bolas (1-20):</label>
+        <input type="number" id="blue-ball-speed" value="7" min="1" max="20" />
+        <button type="button" id="blue-apply-settings">Aplicar</button>
+      </form>
+
+    </main>
+
+
+
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
