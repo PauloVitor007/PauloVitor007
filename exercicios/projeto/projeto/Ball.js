@@ -1,6 +1,3 @@
-/**
- * representa uma bola no jogo.
- */
 export class Ball {
   /**
    * Cria uma nova bola.
@@ -21,7 +18,6 @@ export class Ball {
   }
 
   /**
-   * Desenha a bola no canvas.
    * @param {CanvasRenderingContext2D} ctx - O contexto 2D do canvas.
    */
   draw(ctx) {
@@ -32,7 +28,6 @@ export class Ball {
   }
 
   /**
-   * Atualiza a posição da bola e detecta colisão com as paredes.
    * @param {number} width - A largura do canvas.
    * @param {number} height - A altura do canvas.
    */
@@ -54,13 +49,11 @@ export class Ball {
   }
 
   /**
-   * Detecta se a bola colidiu com um dos gols.
    * @param {object} goal1 - O objeto do time 1 vermelho.
    * @param {object} goal2 - O objeto do time 2 azul.
    * @returns {string|null} Retorna red se o time vermelho marcou, blue se o azul marcou, ou null se não houve gol.
    */
   collisionDetect(goal1, goal2) {
-    //Detecta gol no Time 1 marcado pelo time azul
     if (
       this.x - this.size < goal1.x + goal1.w && 
       this.y - this.size > goal1.y &&
