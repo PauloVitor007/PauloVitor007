@@ -1,5 +1,4 @@
 /**
- * representa um time o gol no jogo.
  */
 export class Team {
   /**
@@ -24,7 +23,6 @@ export class Team {
   }
 
   /**
-   * Desenha a trave do time no canvas.
    * @param {CanvasRenderingContext2D} ctx - O contexto 2D do canvas.
    */
   draw(ctx) {
@@ -33,7 +31,6 @@ export class Team {
   }
 
   /**
-   * Define uma nova altura para a trave e a recentraliza.
    * @param {number} newHeight - A nova altura da trave.
    * @param {number} canvasHeight - A altura total do canvas.
    */

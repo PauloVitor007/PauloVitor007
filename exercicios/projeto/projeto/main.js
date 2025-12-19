@@ -1,26 +1,21 @@
-// Exercicio 3: Importar os módulos
 import { Ball } from "./Ball.js";
 import { Team } from "./Team.js";
 import { random } from "./utils.js";
 
-// set up canvas
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
 const width = (canvas.width = window.innerWidth * 0.7);
 const height = (canvas.height = window.innerHeight * 0.7);
 
-// --- Elementos da DOM ---
 const scoreRedEl = document.getElementById("score-red");
 const scoreBlueEl = document.getElementById("score-blue");
 const goalMessageEl = document.getElementById("goal-message");
 
-// --- variáveis do Jogo ---
 const balls = [];
 let team_red = new Team(0, 30, 100, "red", height);
 let team_blue = new Team(width - 30, 30, 100, "blue", height);
 
-// Exercício 6:variáveis do Placar
 let score_red = 0;
 let score_blue = 0;
 
@@ -31,7 +26,7 @@ let score_blue = 0;
 function start() {
   balls.length = 0; // limpa o array de bolas
 
-  // Cria bolas para o time vermelho
+  // Cria bolas vermelhas
   for (let i = 0; i < team_red.balls_count; i++) {
     const size = random(10, 20);
     const ball_red = new Ball(
@@ -45,7 +40,7 @@ function start() {
     balls.push(ball_red);
   }
 
-  // cria as bolas para o time azul
+  // cria as bolas azul
   for (let i = 0; i < team_blue.balls_count; i++) {
     const size = random(10, 20);
     const ball_blue = new Ball(
@@ -82,7 +77,6 @@ function applySettings() {
   team_blue.balls_count = blueCount;
   team_blue.ball_speed = blueSpeed;
 
-  // Exercicioi 6: Resetar placar ao aplicar novas configurações
   score_red = 0;
   score_blue = 0;
   updateScoreboard();
@@ -127,7 +121,6 @@ function displayGoalMessage(teamColor) {
   goalMessageEl.style.color = teamColor;
   goalMessageEl.style.opacity = "1";
 
-  // aqui esconde a mensagem após um tempo
   setTimeout(() => {
     goalMessageEl.style.opacity = "0";
   }, 1000); // Mostra por 1 segundo
@@ -142,7 +135,6 @@ function resetBall(ball) {
   ball.x = width / 2;
   ball.y = height / 2;
   
-  // Define uma nova velocidade aleatória baseada na velocidade original do time
   const speed = ball.color === 'red' ? team_red.ball_speed : team_blue.ball_speed;
   ball.velX = random(-speed, speed) || (Math.random() > 0.5 ? 1 : -1); 
   ball.velY = random(-speed, speed) || (Math.random() > 0.5 ? 1 : -1);
@@ -180,7 +172,6 @@ function loop() {
     ball.draw(ctx);
     ball.update(width, height);
 
-    // Exericio 6: Lógica de detecção de gol
     const teamThatScored = ball.collisionDetect(team_red, team_blue);
 
     if (teamThatScored) {
@@ -200,13 +191,11 @@ function loop() {
   requestAnimationFrame(loop);
 }
 
-//  Adicionando os Eventos nos Botões 
-// O botão "Start" aplica as configurações atuais e reseta o placar/bolas
+
 document.getElementById("buttonStart").addEventListener("click", applySettings);
 document.getElementById("buttonReset").addEventListener("click", resetGame);
 document.getElementById("red-apply-settings").addEventListener("click", applySettings);
 document.getElementById("blue-apply-settings").addEventListener("click", applySettings);
 
-//  inicio do jogo 
 applySettings(); // Começa o jogo com as configurações padrão
 loop(); // Começa o loop de animação
