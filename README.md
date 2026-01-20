@@ -16,7 +16,7 @@ Atualmente estudando programação, linguagens e dublagem, enquanto desenvolvo p
 • Idiomas (principalmente inglês e japonês)
 
 ### Como falar comigo
-• Instagram de fotografia: **@paulo.vision** (se quiser, posso colocar o link direto)  
+• Instagram de fotografia: **@paulo.vision** 
 • GitHub Issues também estão abertos para conversar 👀  
 • Se me encontrar por aí, provavelmente vou estar ouvindo música ou pedalando
 
